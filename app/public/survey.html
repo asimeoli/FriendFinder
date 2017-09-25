@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Care Bear Friend Finder</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <div class="row">
+        <h1 class="header center pink-text text-lighten-1">Care-a-Lot Friend Finder Survey</h1>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">favorite</i>
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Name</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">grade</i>
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Link to Photo</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>How much do you love sharing?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>1. Sharing</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>Do you think caring is super important?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>2. Caring</label>
+    </div>
+    <br>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>Do you love having fun?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>3. Fun</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>Do you think cooperation is the best?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>4. Cooperation</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>How much do you love celebrations?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>5. Celebrate</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>Do you believe any problem can be solved with love?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>6. Love</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected>Do you love sunshine?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>7. Sunshine</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select id="luck8">
+            <option value="" disabled selected>Do you believe in Luck?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>8. Luck</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select id="naps9">
+            <option value="" disabled selected>Do you love to nap?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>9. Naps</label>
+    </div>
+    <br>
+    <div class="input-field col s12">
+        <select id="c10">
+            <option value="" disabled selected>Do you value courage and bravery?</option>
+            <option value="1">1 (Not so much)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (More than anything!)</option>
+        </select>
+        <label>10. Courage</label>
+    </div>
+    <br>
+    <div class="row center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+        $('#submit').on('click', function() {
+            console.log("hello");
+            var question10 = $("#c10").val()
+            console.log(question10);
+
+        })
+    });
+    </script>
+</body>
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+<script type="text/javascript">
+// In this code, jQuery is used to "download" the data from our server
+// We then dynamically display this content in our friends. This is very similar to the group projects you just completed.
+// It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
+
+function runfriendsQuery() {
+
+    // Here we get the location of the root page.
+    // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+    var currentURL = window.location.origin;
+
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+        .done(function(friendsData) {
+
+            // Here we are logging the URL so we have access to it for troubleshooting
+            console.log("------------------------------------");
+            console.log("URL: " + currentURL + "/api/friends");
+            console.log("------------------------------------");
+
+            // Here we then log the NYTData to console, where it will show up as an object.
+            console.log(friendsData);
+            console.log("------------------------------------");
+
+            // Loop through and display each of the customers
+            for (var i = 0; i < friendsData.length; i++) {
+
+                // Create the HTML Well (Section) and Add the friends content for each reserved friends
+                var friendsSection = $("<div>");
+                friendsSection.addClass("well");
+                friendsSection.attr("id", "friendsWell-" + i + 1);
+                $("#friendsSection").append(friendsSection);
+
+                var friendsNumber = i + 1;
+
+
+                // Then display the remaining fields in the HTML (Section Name, Date, URL)
+                $("#friendsWell-" + i + 1).append("<h2><span class='label label-primary'>" + friendsNumber + "</span> | " + friendsData[i].customerID + "</h2>");
+            }
+        });
+}
+
+
+// This function resets all of the data in our friendss. This is intended to let you restart a demo.
+function clearfriends() {
+
+    var currentURL = window.location.origin;
+    $.ajax({ url: currentURL + "/api/clear", method: "POST" });
+
+}
+
+$("#clear").on("click", function() {
+    alert("Clearing...");
+    clearfriends();
+
+    // Refresh the page after data is cleared
+    location.reload();
+
+});
+
+
+// Run Queries!
+// ==========================================
+runfriendsQuery();
+</script>
+
+</html>
