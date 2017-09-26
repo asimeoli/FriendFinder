@@ -1,0 +1,19 @@
+Hi Drake, 
+
+I could not finish this homework. I became very frustrated when I could not get my assets to go through to the server and ran out of time. 
+In order to finish, I need to complete the intake form and compare the information from each "friend."
+For each response, I would compare the 1-5 value for their answer and find the differences. Then going through the list of friends
+to see which friend had the least amount of difference in their answers. 
+I would have also used a materialize card (http://materializecss.com/cards.html) to display this information because I think it would look
+like old-fashioned info cards in cartoons ex Carmen San Diego. 
+
+Some other notes for myself when I review this assignment: 
+1. I got very overwhelmed by all of the files and folders for this project. I will need to find a better way of keeping this organized. 
+When I moved or changed something it was hell to track down and make the adjustments. These projects are only going to get bigger and 
+more complicated.
+
+2. WTF with the static files, it looked like everything was working and then boom 404 not found. I need to look for a tutorial on this, 
+It was extremely annoying. I spent most of my tutoring session trying to fix it, and she couldn't get it either. 
+
+3. Allocation of resources. Normally I like to write my js and have everything working in the command line BEFORE I dick with the front end. 
+This time I thought I would throw that together (I used a template it really did come together fast) and then have something nice to look at while I got my code working. It didn't work that way and I will return to my previous method. 
