@@ -10,7 +10,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -31,15 +31,15 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">grade</i>
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Link to Photo</label>
+                    <textarea id="textarea2" class="materialize-textarea"></textarea>
+                    <label for="textarea2" id="photo">Link to Photo</label>
                 </div>
             </div>
         </form>
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q1">
             <option value="" disabled selected>How much do you love sharing?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -51,7 +51,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q2">
             <option value="" disabled selected>Do you think caring is super important?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -64,7 +64,7 @@
     <br>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q3">
             <option value="" disabled selected>Do you love having fun?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -76,7 +76,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q4">
             <option value="" disabled selected>Do you think cooperation is the best?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -88,7 +88,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q5">
             <option value="" disabled selected>How much do you love celebrations?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -100,7 +100,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q6">
             <option value="" disabled selected>Do you believe any problem can be solved with love?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -112,7 +112,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select>
+        <select id="q7">
             <option value="" disabled selected>Do you love sunshine?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -124,7 +124,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select id="luck8">
+        <select id="q8">
             <option value="" disabled selected>Do you believe in Luck?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -136,7 +136,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select id="naps9">
+        <select id="q9">
             <option value="" disabled selected>Do you love to nap?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -148,7 +148,7 @@
     </div>
     <br>
     <div class="input-field col s12">
-        <select id="c10">
+        <select id="q10">
             <option value="" disabled selected>Do you value courage and bravery?</option>
             <option value="1">1 (Not so much)</option>
             <option value="2">2</option>
@@ -167,20 +167,30 @@
     <!--Import jQuery before materialize.js-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('select').material_select();
-        $('#submit').on('click', function() {
-            console.log("hello");
-            var question10 = $("#c10").val()
-            console.log(question10);
-
-        })
-    });
-    </script>
+    <script type="text/javascript"></script>
 </body>
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
 <script type="text/javascript">
+$(document).ready(function() {
+    var answerArray = [];
+
+    function createAnswer(name, photo, scores) {
+        this.name = name;
+        this.photo = photo;
+        this.scores = scores;
+    }
+    $('select').material_select();
+    $('#submit').on('click', function() {
+        var answer = {
+            name: $("#textarea1").val(),
+            photo: $("#textarea2").val(),
+            answers: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        };
+        answerArray.push(answer);
+        console.log(answer);
+        console.log(friendsData);
+    })
+});
 // In this code, jQuery is used to "download" the data from our server
 // We then dynamically display this content in our friends. This is very similar to the group projects you just completed.
 // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
@@ -218,32 +228,18 @@ function runfriendsQuery() {
 
                 // Then display the remaining fields in the HTML (Section Name, Date, URL)
                 $("#friendsWell-" + i + 1).append("<h2><span class='label label-primary'>" + friendsNumber + "</span> | " + friendsData[i].customerID + "</h2>");
+                return friendsData;
             }
         });
 }
 
 
-// This function resets all of the data in our friendss. This is intended to let you restart a demo.
-function clearfriends() {
-
-    var currentURL = window.location.origin;
-    $.ajax({ url: currentURL + "/api/clear", method: "POST" });
-
-}
-
-$("#clear").on("click", function() {
-    alert("Clearing...");
-    clearfriends();
-
-    // Refresh the page after data is cleared
-    location.reload();
-
-});
 
 
 // Run Queries!
 // ==========================================
-runfriendsQuery();
+// runfriendsQuery();
+var friendsData = runfriendsQuery();
 </script>
 
 </html>

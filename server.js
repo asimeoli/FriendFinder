@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
+
 // ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
@@ -19,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
-app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use(express.static('public'));
+// app.use('/public', express.static(path.join(__dirname, 'public')))
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
